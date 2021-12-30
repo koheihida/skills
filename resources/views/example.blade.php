@@ -8,6 +8,7 @@
 </head>
 <body>
 <h1>サンプル</h1>
+{{ $examples }}
 </body>
 </html>
 
