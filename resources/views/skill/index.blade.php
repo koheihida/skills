@@ -31,7 +31,10 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-                          </table>
+                        </table>
+                        <div class="flex justify-center mt-3">
+                            {{ $skills->links() }}
+                        </div>
                     </div>
                 </div>
             </div>

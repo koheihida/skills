@@ -8,7 +8,8 @@ class SkillController extends Controller
 {
     public function index()
     {
-        $skills = Skill::all();
+        $skills = Skill::paginate(2);
+        
         return view('skill.index', [
             'skills' => $skills
         ]);
