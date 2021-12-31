@@ -8,8 +8,8 @@ class SkillController extends Controller
 {
     public function index()
     {
-        $examples = Skill::all();
-        return view('skill', [
+        $skills = Skill::all();
+        return view('skill.index', [
             'skills' => $skills
         ]);
     }
