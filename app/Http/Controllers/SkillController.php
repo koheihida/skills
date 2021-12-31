@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Skill;
+use Illuminate\Http\Request;
 
 class SkillController extends Controller
 {
@@ -27,6 +28,16 @@ class SkillController extends Controller
     public function new()
     {
         return view('skill.new');
+    }
+
+    public function create(Request $request)
+    {
+        $skill = new Skill();
+        $skill->skill_name = $request->input('skill_name');
+        $skill->skill_status = $request->input('skill_status');
+        $skill->save();
+
+        return redirect(to: 'skill');
     }
 }
 
