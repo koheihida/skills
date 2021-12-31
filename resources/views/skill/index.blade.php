@@ -27,7 +27,12 @@
                                     <tr>
                                     <td class="border px-4 py-2">{{ $skill->id }}</td>
                                     <td class="border px-4 py-2">{{ $skill->skill_name}}</td>
-                                    <td class="border px-4 py-2">{{ $skill->skill_status}}</td>
+                                    <td class="border px-4 py-2">{{ \App\Models\Skill::SKILL_STATUS_OBJECT[$skill->skill_status] }}</td>
+                                    <td class="border px-4 py-2">
+                                        <button onclick="location.href='/skill/detail/{{ $skill->id }}'" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                                            詳細
+                                        </button>
+                                    </td>
                                     </tr>
                                 @endforeach
                             </tbody>
