@@ -37,7 +37,7 @@ class SkillController extends Controller
         $skill->skill_status = $request->input('skill_status');
         $skill->save();
 
-        return redirect(to: 'skill');
+        return redirect('skill');
     }
 }
 
