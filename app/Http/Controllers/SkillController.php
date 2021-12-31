@@ -23,5 +23,10 @@ class SkillController extends Controller
             'skill' => $skill
         ]);
     }
+
+    public function new()
+    {
+        return view('skill.new');
+    }
 }
 
