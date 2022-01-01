@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\UsuallyController;
 use Illuminate\Support\Facades\Route;
 
 /*
