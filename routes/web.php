@@ -29,6 +29,7 @@ Route::middleware(['auth'])->prefix('skill')->group(function() {
     Route::get('/edit/{id}', [SkillController::class, 'edit'])->name('skill.edit');
     Route::post('/create', [SkillController::class, 'create'])->name('skill.create');
     Route::patch('/update', [SkillController::class, 'update'])->name('skill.update');
+    Route::delete('/remove/{id}', [SkillController::class, 'remove'])->name('skill.remove');
 });
 
 require __DIR__.'/auth.php';

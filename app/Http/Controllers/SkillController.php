@@ -48,7 +48,6 @@ class SkillController extends Controller
             'skill' => $skill
         ]);
     }
-
     public function update(Request $request)
     {
         $skill = Skill::find($request->input('id'));
@@ -57,6 +56,13 @@ class SkillController extends Controller
         $skill->save();
 
         return redirect('skill')->with('status', 'スキルを更新しました！！');
+    }
+
+    public function remove($id)
+    {
+        $skill = Skill::find($id)->delete();
+
+        return redirect('skill')->with('status', 'スキルを削除しました!!');
     }
 }
 
