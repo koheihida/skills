@@ -45,6 +45,15 @@
                                             編集
                                         </button>
                                     </td>
+                                    <td class="border px-4 py-2">
+                                        <form action="/skill/remove/{{ $skill->id }}" method="POST">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="shadow bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" >
+                                                削除
+                                            </button>
+                                        </form>
+                                    </td>
                                     </tr>
                                 @endforeach
                             </tbody>

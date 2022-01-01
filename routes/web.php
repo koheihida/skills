@@ -22,6 +22,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::middleware(['auth'])->prefix('usually')->group(function () {
+    Route::get('/',[UsuallyController::class, 'index'])->name('usually');
+});
+
 Route::middleware(['auth'])->prefix('skill')->group(function() {
     Route::get('/', [SkillController::class, 'index'])->name('skill');
     Route::get('/detail/{id}', [SkillController::class, 'detail'])->name('skill.detail');
