@@ -39,5 +39,14 @@ class SkillController extends Controller
 
         return redirect('skill')->with('status', 'スキルを作成しました！！');
     }
+
+    public function edit($id)
+    {
+        $skill = Skill::find($id);
+
+        return view('skill.edit', [
+            'skill' => $skill
+        ]);
+    }
 }
 
